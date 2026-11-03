@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  java-runner:
+    image: eclipse-temurin:21-jdk-alpine
+    container_name: java_lts_runner
+    volumes:
+      - ./Main.java:/app/Main.java
+    working_dir: /app
+    command: java Main.java
